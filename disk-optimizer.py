@@ -1,11 +1,8 @@
-import shutil
-import os, time
+import shutil, os, time
 def DISK_OPTIMIZER():
     def storageusage():
-        print()
-        print("Disk storage usage")
-        print()
-        what_disk = input("Which disk? - (default -> C):   ")
+        print("\nDisk storage usage\n")
+        what_disk = input("Disk >>> ")
         print()
         total,used,free = shutil.disk_usage(what_disk +":")
         print("Total:%d GiB" %(total //(2**30)))
@@ -13,33 +10,21 @@ def DISK_OPTIMIZER():
         print("Free:%d GiB" %(free //(2**30)))
         DISK_OPTIMIZER()
     def cleanup():
-        print()
-        print("Disk cleaner")
-        print()
+        print("\nDisk cleaner\n")
         clean = os.popen("Cleanmgr.exe").read()
         print("cleaning...")
-        print("...")
-        print("...")
-        print("...")
-        print("Finished cleaning the disk!")
-        print()
+        print("Finished cleaning the disk!\n")
         DISK_OPTIMIZER()
     def defrag():
-        print()
-        print("Disk defragger")
-        print()
+        print("\nDisk defragger\n")
         defrag = os.popen("dfrgui.exe C: C/ F/ M")
-        print("Press 'Optimize' in the window")
-        print()
+        print("Press 'Optimize' in the window\n")
         time.sleep(5)
         DISK_OPTIMIZER()
-    print()
-    print("  1  -  Check storage usage")
+    print("\n  1  -  Check storage usage")
     print("  2  -  Cleanup disk")
     print("  3  -  Defrag disk")
-    print()
-    print("  q  -  Quit")
-    print()
+    print("  q  -  Quit\n")
     tmp_in = input(" --->  ")
     if tmp_in == "1":
         storageusage()
@@ -53,9 +38,7 @@ def DISK_OPTIMIZER():
                 if tmp_in == "q":
                     quit()
                 else:
-                    print()
-                    print("ERROR!")
-                    print()
+                    print("\nERROR\n")
                     DISK_OPTIMIZER()
 sleep_var = 0.1
 print()
