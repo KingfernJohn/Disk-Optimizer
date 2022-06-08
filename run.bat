@@ -1,2 +1,3 @@
 @echo off
-PYTHON disk_optimizer.py
+color 06
+PYTHON disk-optimizer.py
