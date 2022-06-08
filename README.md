@@ -1,7 +1,9 @@
 # Disk - Optimizer
 
-This simple Python script optimizes your disk`s
+Windows:
+- run - 'installer.bat'
+- run - 'run.bat'
 
-> Install the required files, which you can find in the text file.
-
-*Public version*
+Linux:
+- sudo pip install shutil
+- sudo python disk-optimizer.py
