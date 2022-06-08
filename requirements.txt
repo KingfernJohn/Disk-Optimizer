@@ -1,14 +1,1 @@
-https://www.python.org/downloads/
-
-####################################
-
-windows:
-
-pip install shutil
-______________________
-
-ubuntu:
-
 sudo pip install shutil
-
-______________________
